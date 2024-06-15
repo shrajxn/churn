@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+</head>
+<body>
+    <h1>Churn Prediction</h1>
+    <form id="prediction-form" action='/predict' method="post" enctype="multipart/form-data">
+        <input type="number" name="tenure" placeholder="Tenure" required>
+        <select name="contract" required>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
+        </select>
+        <input type="number" name="total_charges" placeholder="Total Charges" step="any" required>
+        <button type="submit">Predict Churn</button>
+    </form>
+    {% if message %}
+        <p id="prediction">{{ message }}</p>
+    {% endif %}
+</body>
+</html>
+
+

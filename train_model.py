@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import joblib
 # Load data
-file_path = r'C:\Users\Shrajan\OneDrive\Desktop\flask_ml_project\churn\Churn-Data.csv'
+file_path = 'C:\\Users\\Shrajan\\OneDrive\\Desktop\\flask_ml_project\\churn\\Churn-Data.csv'
   # Adjust if your dataset is in a different location
 df = pd.read_csv(file_path)
 
